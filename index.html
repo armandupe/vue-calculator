@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue.js Calculator</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="light.css" id="theme">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <main id="app">
+      <section class="calculator">
+      <h1 class="main-title">Calculator</h1>
+      <div class="top-buttons">
+        <button class="top-buttons__button">
+          <i class="fab fa-github"></i>
+          <a class="top-buttons__button-link" target="_blank" href="https://github.com/armandupe/vue-calculator">GitHub</a>
+        </button>
+        <button class="top-buttons__button" @click="switchTheme()" id="dark-mode">Dark Mode 🌙</button>
+      </div>
+      <div class="first-row row">
+        <input class="calculator_input result" type="text" name="result" id="result" value="" placeholder="Result">
+        <input class="calculator_input clear" type="button" value="C" @click="clearScreen()">
+      </div>
+      <div class="row">
+        <!-- <input v-for="input in inputs" class="calculator_input" type="button" v-bind:value="input.value" @click="inputHandler(1)"> -->
+        <input class="calculator_input" type="button" value="1" @click="inputHandler(1)" id="one">
+        <input class="calculator_input" type="button" value="2" @click="inputHandler(2)" id="two">
+        <input class="calculator_input" type="button" value="3" @click="inputHandler(3)" id="three" >
+        <input class="calculator_input" type="button" value="+" @click="inputHandler('+')">
+      </div>
+      <div class="row">
+        <input class="calculator_input" type="button" value="4" @click="inputHandler(4)" id="four" >
+        <input class="calculator_input" type="button" value="5" @click="inputHandler(5)" id="five" >
+        <input class="calculator_input" type="button" value="6" @click="inputHandler(6)" id="six" >
+        <input class="calculator_input" type="button" value="-" @click="inputHandler('-')">
+      </div>
+      <div class="row">
+        <input class="calculator_input" type="button" value="7" @click="inputHandler(7)" id="seven" >
+        <input class="calculator_input" type="button" value="8" @click="inputHandler(8)" id="eight" >
+        <input class="calculator_input" type="button" value="9" @click="inputHandler(9)" id="nine" >
+        <input class="calculator_input" type="button" value="x" @click="inputHandler('*')">
+      </div>
+      <div class="row">
+        <input class="calculator_input" type="button" value="/" @click="inputHandler('/')">
+        <input class="calculator_input" type="button" value="0" @click="inputHandler(0)" id="zero">
+        <input class="calculator_input" type="button" value="." @click="inputHandler('.')" class="dot" >
+        <input class="calculator_input" type="button" value="=" @click="result()">
+      </div>
+      </section>
+    </main>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://kit.fontawesome.com/f28b055962.js" crossorigin="anonymous"></script>
+  <script src="script.js" async defer></script>
+</body>
+</html>
