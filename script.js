@@ -1,11 +1,28 @@
 new Vue({
     el: '#app',
     data: {
-        inputs: [
-            {value: '1'},
-            {value: '2'},
-            {value: '3'},
-            {value: '+'},
+        inputsFirstRow: [
+            {key: '1'},
+            {key: '2'},
+            {key: '3'},
+            {key: '+'}
+        ],
+        inputsSecondRow: [
+            {key: '4'},
+            {key: '5'},
+            {key: '6'},
+            {key: '-'}
+        ],
+        inputsThirdRow: [
+            {key: '7'},
+            {key: '8'},
+            {key: '9'},
+            {key: '*'}
+        ],
+        inputsFourthRow: [
+            {key: '/'},
+            {key: '0'},
+            {key: '.'}
         ],
     },
     methods: {

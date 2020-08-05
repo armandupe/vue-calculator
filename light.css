@@ -1,5 +1,6 @@
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: "Open Sans", sans-serif;
@@ -7,10 +8,18 @@
   }
 
   .body {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background: #4CA1AF;  
+    background: -webkit-gradient(linear, left top, right top, from(#C4E0E5), to(#4CA1AF));  
+    background: -o-linear-gradient(left, #C4E0E5, #4CA1AF);  
     background: linear-gradient(to right, #C4E0E5, #4CA1AF); 
+    -webkit-transition: 0.8s; 
+    -o-transition: 0.8s; 
     transition: 0.8s;
   }
 
@@ -18,6 +27,8 @@
       margin-top: 4rem;
       border: 3px solid;
       padding: 1rem;
+      background-image: -webkit-gradient(linear, left bottom, left top, from(#cfd9df), to(#e2ebf0));
+      background-image: -o-linear-gradient(bottom, #cfd9df 0%, #e2ebf0 100%);
       background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   }
 
@@ -32,24 +43,27 @@
     color: rgb(17, 16, 16);
     font-size: 1em;
     cursor: pointer;
-    width: 70px;
+    width: 25%;
     background-color: #fff;
-    border: none;
     outline: none;
     border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
   }
 
-  .first-row {
+  .first-row,
+  .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 3px;
   }
   
   .calculator_input.result {
-    flex-grow: 13;
+    -webkit-box-flex: 13;
+        -ms-flex-positive: 13;
+            flex-grow: 13;
     border-radius: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
@@ -60,23 +74,20 @@
   }
 
   .calculator_input.clear {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     width: auto;
     border-radius: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
 
-  .first-row,
-  .row {
-    margin-bottom: 3px;
-  }
-
-  input[type="text"] {
+  .result {
     background-color: rgb(255, 255, 255);
   }
 
-  input[type="button"]:hover {
+  .calculator_input:hover {
     background-color: rgb(37, 35, 59);
     color: #fff;
   }
@@ -95,15 +106,14 @@
     cursor: pointer;
     outline: none;
     border-radius: 4px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
   }
 
   .top-buttons__button:hover {
-      box-shadow: 0 0 5px 5px;
+      -webkit-box-shadow: 0 0 5px 5px;
+              box-shadow: 0 0 5px 5px;
   }
 
   .top-buttons__button:hover .fa-github,
