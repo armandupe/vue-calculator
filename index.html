@@ -22,6 +22,7 @@
       </div>
       <div class="first-row row">
         <input class="calculator_input result" type="text" name="result" id="result" value="" placeholder="Result" readonly>
+        <input class="calculator_input remove" value="Del" type="button" @click="removeSymbol()">
         <input class="calculator_input clear" type="button" value="C" @click="clearScreen()">
       </div>
       <div class="row">

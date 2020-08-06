@@ -35,6 +35,9 @@ new Vue({
         result() {
             result.value = eval(result.value);
         },
+        removeSymbol() {
+            result.value = result.value.slice(0, -1);
+        },
         switchTheme() {
             const darkMode = document.getElementById("dark-mode");
             const theme = document.getElementById("theme");

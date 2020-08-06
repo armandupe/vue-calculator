@@ -24,8 +24,9 @@
   }
 
   .calculator {
+      border-radius: 3%;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
       margin-top: 4rem;
-      border: 3px solid;
       padding: 1rem;
       background-image: -webkit-gradient(linear, left bottom, left top, from(#cfd9df), to(#e2ebf0));
       background-image: -o-linear-gradient(bottom, #cfd9df 0%, #e2ebf0 100%);
@@ -43,7 +44,7 @@
     color: rgb(17, 16, 16);
     font-size: 1em;
     cursor: pointer;
-    width: 25%;
+    width: 24%;
     background-color: #fff;
     outline: none;
     border-radius: 4px;
@@ -61,26 +62,16 @@
   }
   
   .calculator_input.result {
-    -webkit-box-flex: 13;
-        -ms-flex-positive: 13;
-            flex-grow: 13;
-    border-radius: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    flex-basis: 49%;
   }
 
   .calculator_input.result:hover {
     background-color: rgb(228, 224, 224);
   }
 
+  .calculator_input.remove,
   .calculator_input.clear {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    width: auto;
-    border-radius: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    flex-basis: 24%;
   }
 
   .result {
@@ -112,8 +103,8 @@
   }
 
   .top-buttons__button:hover {
-      -webkit-box-shadow: 0 0 5px 5px;
-              box-shadow: 0 0 5px 5px;
+      -webkit-box-shadow: 0 0 10px 1px #000;
+              box-shadow: 0 0 10px 1px #000;
   }
 
   .top-buttons__button:hover .fa-github,
