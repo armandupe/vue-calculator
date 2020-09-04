@@ -48,6 +48,16 @@ new Vue({
               theme.href = "light.css";
               darkMode.innerHTML = "Dark Mode 🌙";
             }
-        }
-    }
+        },
+        stopInput() {
+            const result = document.querySelector('.result');
+            if (result.value == '+' ||
+                result.value == '-' ||
+                result.value == '*' ||
+                result.value == '/' ||
+                result.value == '.') {
+                result.value = '';
+            }   
+        },
+    },
 })
